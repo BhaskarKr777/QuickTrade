@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - QuickTrade</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1>QuickTrade</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <!-- <a href="login.html">Login</a> -->
+                <!-- <a href="cart.html">Cart (<span id="cart-count">0</span>)</a> -->
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Sign in</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Sign in</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+            <p class="register-link">Don't have an account? <a href="#">Register here</a></p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

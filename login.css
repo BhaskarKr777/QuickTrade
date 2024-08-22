@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('stock1.webp') no-repeat center center fixed; /* Update with your background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+}
+
+header {
+    background-color: #4b0082; /* Blue color for the navbar */
+    padding: 15px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height to avoid overlap with navbar */
+}
+
+.login-box {
+    background: rgba(255, 255, 255, 0.8); /* Light background with opacity */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Fixed width for the login box */
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4b0082; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Full width button */
+}
+
+button:hover {
+    background-color: #0055a5; /* Darker blue on hover */
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
