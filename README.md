@@ -1,0 +1,2 @@
+# QuickTrade
+A Stock Website
