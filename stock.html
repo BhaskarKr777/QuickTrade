@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Dashboard</title>
+    <link rel="stylesheet" href="stock.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="Stock logo.png" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://www.livemint.com/market/stock-market-news">News</a></li>
+            <li><a href="#about-us">About</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <aside>
+            <h2>Watchlist</h2>
+            <ul id="watchlist"></ul>
+        </aside>
+        
+        <main>
+            <header>
+                <h1>Stocks</h1>
+                <div class="search-box">
+                    <input type="text" id="stock-symbol" placeholder="Enter stock symbol (e.g., AAPL)">
+                    <button id="search-btn">Search</button>
+                    <button id="add-watchlist-btn">Add to Watchlist</button>
+                </div>
+            </header>
+            
+            <section id="stock-info">
+                <h2>Stock Information</h2>
+                <div id="stock-details">
+                    <p id="stock-name">Stock Name: <span></span></p>
+                    <p id="current-price">Current Price: <span></span></p>
+                    <p id="price-change">Price Change: <span></span></p>
+                </div>
+                <canvas id="stockChart" width="400" height="200"></canvas>
+            </section>
+            
+            <section id="comparison">
+                <h2>Stock Comparison</h2>
+                <div class="search-box">
+                    <input type="text" id="compare-symbol" placeholder="Enter stock symbol to compare">
+                    <button id="compare-btn">Compare</button>
+                </div>
+                <canvas id="comparisonChart" width="400" height="200"></canvas>
+            </section>
+        </main>
+    </div>
+
+    <script src="stock.js"></script>
+</body>
+</html>
