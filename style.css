@@ -1,0 +1,361 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    background-color: #fbfbfb;
+    padding: 15px 20px;
+    color: #000;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    border-radius: 5px;
+    height: 50px;
+    position: relative;
+    top: -10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6c42cc;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header-buttons .search-stocks-input {
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-right: 15px;
+    max-width: 200px;
+    transition: border-color 0.3s ease;
+}
+
+.header-buttons .search-stocks-input:focus {
+    border-color: #6c42cc;
+    outline: none;
+}
+
+.header-buttons button {
+    background-color: #fff;
+    color: #6c42cc;
+    border: 1px solid #6c42cc;
+    padding: 8px 16px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-buttons button:hover {
+    background-color: #6c42cc;
+    color: #fff;
+}
+
+.header-buttons .open-account-btn {
+    background-color: #f4f4f4;
+    border: 1px solid #d0d0d0;
+}
+
+.header-buttons .open-account-btn:hover {
+    background-color: #6c42cc;
+}
+
+/* Adjust the top padding of the main content to prevent it from being hidden behind the fixed header */
+body {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #6c42cc;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #6c42cc;
+}
+
+.investment-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.option {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.option img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.option h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #6c42cc;
+}
+
+/* Steps Section */
+#steps {
+    padding: 97px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#steps h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #6c42cc;
+}
+
+#steps p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step img {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #6c42cc;
+}
+
+.qr img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.qr p img {
+    width: 80px;
+    margin: 10px;
+}
+
+/* Pro Section Styles */
+.pro-section {
+    padding: 60px 20px;
+    background-color: #6c42cc;
+}
+
+.pro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.pro-content {
+    max-width: 50%;
+}
+
+.pro-content h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.pro-content p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.pro-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature {
+    font-size: 16px;
+}
+
+.feature h3 {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #000000;
+}
+
+.pro-images {
+    max-width: 50%;
+   display:flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pro-images img {
+    width: 32%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pro-images img:hover {
+    transform: translateY(-5px);
+}
+
+/* about page */
+
+#about-us {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+#about-us .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about-us h1 {
+    color: #4b0082; /* Dark purple for the heading */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#about-us p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+/* footer */
+
+footer {
+    background-color: #4b0082; /* Dark purple background */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.875rem;
+}
