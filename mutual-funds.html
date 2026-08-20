@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mutual Funds | QuickTrade</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <style>
+    .funds-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .fund-card {
+      background: #151828 !important;
+      border: 1px solid #272c48 !important;
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #f8fafc !important;
+    }
+    .fund-card h3 {
+      color: #ffffff !important;
+    }
+    .fund-tag {
+      font-size: 11.5px;
+      color: #c4b5fd !important;
+      font-weight: 600;
+      background: rgba(124, 58, 237, 0.18) !important;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .cagr-badge {
+      font-size: 22px;
+      font-weight: 800;
+      color: #10b981 !important;
+      margin: 8px 0;
+    }
+    @media (max-width: 860px) {
+      .funds-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/Stock logo.png" alt="QuickTrade">
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="stock.html">Stocks</a>
+        <a class="nav-link active" href="mutual-funds.html">Mutual Funds</a>
+        <a class="nav-link" href="futures-options.html">Futures &amp; Options</a>
+        <a class="nav-link" href="ipo.html">IPO</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="index.html#account">Open Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Minimal Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero-tag">📈 0% Commission Direct Funds</span>
+        <h1>Invest in <span>Direct Mutual Funds</span></h1>
+        <p class="hero-copy">Explore carefully shortlisted funds based on risk, steady returns, and long-term goals.</p>
+        <div style="max-width: 480px; margin: 0 auto 36px;">
+          <img src="assets/images/Stock  Market.jpeg" alt="Mutual Funds" style="width: 100%; height: 220px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Funds Grid -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Top Rated</span>
+          <h2>Hand-picked Mutual Funds</h2>
+          <p>Consistent historical performance with low expense ratios.</p>
+        </div>
+
+        <div class="funds-grid">
+          <div class="fund-card">
+            <div>
+              <span class="fund-tag">Large &amp; Mid Cap</span>
+              <h3>HDFC Large and Mid Cap Direct</h3>
+              <div class="cagr-badge">+26.8% <span style="font-size: 12px; color: #8e9bb2; font-weight: 500;">(3Y CAGR)</span></div>
+              <p style="font-size: 13.5px; color: #8e9bb2; margin-bottom: 16px;">Steady growth approach with top Indian bluechips and emerging leaders.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Started SIP setup for HDFC Large and Mid Cap');" style="width: 100%;">Start SIP (₹500/mo)</button>
+          </div>
+
+          <div class="fund-card">
+            <div>
+              <span class="fund-tag">Flexi Cap</span>
+              <h3>Parag Parikh Flexi Cap Direct</h3>
+              <div class="cagr-badge">+24.1% <span style="font-size: 12px; color: #8e9bb2; font-weight: 500;">(3Y CAGR)</span></div>
+              <p style="font-size: 13.5px; color: #8e9bb2; margin-bottom: 16px;">Diversified portfolio across domestic and international equities.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Started SIP setup for Parag Parikh Flexi Cap');" style="width: 100%;">Start SIP (₹1,000/mo)</button>
+          </div>
+
+          <div class="fund-card">
+            <div>
+              <span class="fund-tag">ELSS Tax Saver</span>
+              <h3>Mirae Asset ELSS Tax Saver</h3>
+              <div class="cagr-badge">+21.4% <span style="font-size: 12px; color: #8e9bb2; font-weight: 500;">(3Y CAGR)</span></div>
+              <p style="font-size: 13.5px; color: #8e9bb2; margin-bottom: 16px;">Save up to ₹46,800 under Section 80C with 3-year lock-in period.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Started SIP setup for Mirae Asset ELSS');" style="width: 100%;">Start SIP (₹500/mo)</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimal SIP Calculator -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Calculator</span>
+          <h2>Calculate SIP Returns</h2>
+        </div>
+
+        <div class="calc-box">
+          <div class="calc-sliders">
+            <div class="calc-group">
+              <label><span>Monthly SIP</span><strong id="sipAmountValue">₹10,000</strong></label>
+              <input type="range" id="sipAmount" min="500" max="100000" step="500" value="10000">
+            </div>
+            <div class="calc-group">
+              <label><span>Expected Return</span><strong id="sipReturnValue">15%</strong></label>
+              <input type="range" id="sipReturn" min="1" max="30" step="0.5" value="15">
+            </div>
+            <div class="calc-group">
+              <label><span>Duration</span><strong id="sipPeriodValue">15 Yrs</strong></label>
+              <input type="range" id="sipPeriod" min="1" max="30" step="1" value="15">
+            </div>
+          </div>
+
+          <div class="calc-summary">
+            <span>Estimated Total Wealth</span>
+            <h3 id="sipTotalWealth">₹67,68,631</h3>
+            <div class="calc-detail-row">
+              <span style="color: #8e9bb2;">Invested:</span>
+              <strong id="sipInvestedAmount">₹18,00,000</strong>
+            </div>
+            <div class="calc-detail-row">
+              <span style="color: #8e9bb2;">Gain:</span>
+              <strong id="sipEstimatedReturns" style="color: #10b981;">₹49,68,631</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 QuickTrade · Simple &amp; Modern Investing</div>
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="stock.html">Stocks</a>
+          <a href="futures-options.html">Futures &amp; Options</a>
+          <a href="ipo.html">IPO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=3"></script>
+</body>
+</html>

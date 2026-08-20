@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPO Gateway | QuickTrade</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <style>
+    .ipo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .ipo-card {
+      background: #151828 !important;
+      border: 1px solid #272c48 !important;
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: #f8fafc !important;
+    }
+    .ipo-card h3 {
+      color: #ffffff !important;
+    }
+    .ipo-badge {
+      display: inline-block;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #10b981 !important;
+      background: rgba(16, 185, 129, 0.15) !important;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .gmp-pill {
+      background: rgba(124, 58, 237, 0.18) !important;
+      border: 1px solid rgba(167, 139, 250, 0.3) !important;
+      color: #c4b5fd !important;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      margin: 14px 0;
+    }
+    .ipo-info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      padding: 4px 0;
+      color: #cbd5e1 !important;
+    }
+    .ipo-info-row strong {
+      color: #ffffff !important;
+    }
+    @media (max-width: 860px) {
+      .ipo-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/Stock logo.png" alt="QuickTrade">
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="stock.html">Stocks</a>
+        <a class="nav-link" href="mutual-funds.html">Mutual Funds</a>
+        <a class="nav-link" href="futures-options.html">Futures &amp; Options</a>
+        <a class="nav-link active" href="ipo.html">IPO</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="index.html#account">Open Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Minimal Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero-tag">🚀 100% Commission-Free IPOs</span>
+        <h1>Apply for <span>Upcoming IPOs</span></h1>
+        <p class="hero-copy">Discover new public offerings, track Grey Market Premiums (GMP), and apply instantly via UPI.</p>
+        <div style="max-width: 480px; margin: 0 auto 36px;">
+          <img src="assets/images/ipo.jpeg" alt="IPO" style="width: 100%; height: 220px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Active IPOs -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Open for Bidding</span>
+          <h2>Active IPO Issues</h2>
+          <p>Apply before 4:30 PM on the closing date.</p>
+        </div>
+
+        <div class="ipo-grid">
+          <!-- Card 1 -->
+          <div class="ipo-card">
+            <div>
+              <span class="ipo-badge">● Open Now</span>
+              <h3>NTPC Green Energy Ltd</h3>
+              <div class="gmp-pill">
+                <span>Est. GMP:</span>
+                <strong>+₹18.00 (+16.7%)</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Price Band:</span>
+                <strong>₹102 - ₹108</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Lot Size:</span>
+                <strong>138 Shares (₹14,904)</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Subscription:</span>
+                <strong style="color: #a78bfa;">28.4x Total</strong>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Bidding window opened for NTPC Green Energy IPO.');" style="width: 100%; margin-top: 16px;">Apply via UPI</button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="ipo-card">
+            <div>
+              <span class="ipo-badge">● Open Now</span>
+              <h3>Swiggy Limited</h3>
+              <div class="gmp-pill">
+                <span>Est. GMP:</span>
+                <strong>+₹25.00 (+6.4%)</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Price Band:</span>
+                <strong>₹371 - ₹390</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Lot Size:</span>
+                <strong>38 Shares (₹14,820)</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Subscription:</span>
+                <strong style="color: #a78bfa;">3.59x Total</strong>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Bidding window opened for Swiggy IPO.');" style="width: 100%; margin-top: 16px;">Apply via UPI</button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="ipo-card">
+            <div>
+              <span class="ipo-badge">● Open Now</span>
+              <h3>ACME Solar Holdings</h3>
+              <div class="gmp-pill">
+                <span>Est. GMP:</span>
+                <strong>+₹32.00 (+11.1%)</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Price Band:</span>
+                <strong>₹275 - ₹289</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Lot Size:</span>
+                <strong>51 Shares (₹14,739)</strong>
+              </div>
+              <div class="ipo-info-row">
+                <span style="color: #8e9bb2;">Subscription:</span>
+                <strong style="color: #a78bfa;">8.45x Total</strong>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Bidding window opened for ACME Solar IPO.');" style="width: 100%; margin-top: 16px;">Apply via UPI</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Step Guide -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Simple Flow</span>
+          <h2>How to apply for an IPO</h2>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-num">01</span>
+            <h3>Select Lots</h3>
+            <p>Choose the active IPO and the number of lots you want to bid for.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">02</span>
+            <h3>Enter UPI ID</h3>
+            <p>Provide your UPI ID to receive the fund-block mandate.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-num">03</span>
+            <h3>Approve Mandate</h3>
+            <p>Accept the mandate in your UPI app. Funds stay blocked until allotment.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 QuickTrade · Simple &amp; Modern Investing</div>
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="stock.html">Stocks</a>
+          <a href="mutual-funds.html">Mutual Funds</a>
+          <a href="futures-options.html">Futures &amp; Options</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=3"></script>
+</body>
+</html>

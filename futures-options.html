@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Futures &amp; Options | QuickTrade</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <style>
+    .fo-table-wrap {
+      background: #151828 !important;
+      border: 1px solid #272c48 !important;
+      border-radius: var(--radius);
+      overflow-x: auto;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .fo-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+      font-size: 13.5px;
+      color: #f8fafc !important;
+    }
+    .fo-table th {
+      background: #111422 !important;
+      padding: 12px 16px;
+      font-weight: 600;
+      color: #8e9bb2 !important;
+      border-bottom: 1px solid #272c48 !important;
+    }
+    .fo-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #222742 !important;
+      color: #f8fafc !important;
+    }
+    .fo-table tr.atm {
+      background: rgba(124, 58, 237, 0.22) !important;
+      font-weight: 700;
+    }
+    .strike-pill {
+      background: #1c2035 !important;
+      border: 1px solid #272c48 !important;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+      color: #c4b5fd !important;
+    }
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 900px;
+      margin: 32px auto 0;
+    }
+    .strategy-card {
+      background: #151828 !important;
+      border: 1px solid #272c48 !important;
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+      color: #f8fafc !important;
+    }
+    .strategy-card h4 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #ffffff !important;
+    }
+    @media (max-width: 760px) {
+      .strategy-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Minimal Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/Stock logo.png" alt="QuickTrade">
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="stock.html">Stocks</a>
+        <a class="nav-link" href="mutual-funds.html">Mutual Funds</a>
+        <a class="nav-link active" href="futures-options.html">Futures &amp; Options</a>
+        <a class="nav-link" href="ipo.html">IPO</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="index.html#account">Open Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Minimal Hero -->
+    <section class="hero">
+      <div class="container">
+        <span class="hero-tag">⚡ Flat ₹20 / Order Brokerage</span>
+        <h1>Futures &amp; <span>Options</span></h1>
+        <p class="hero-copy">Analyze option chains, market PCR, and Greeks in one simplified workspace.</p>
+        <div style="max-width: 480px; margin: 0 auto 36px;">
+          <img src="assets/images/future.jpeg" alt="Futures &amp; Options" style="width: 100%; height: 220px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line);">
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimal Option Chain Table -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Derivatives Chain</span>
+          <h2>NIFTY 50 Option Chain</h2>
+          <p>Spot Price: <strong>₹24,850.30</strong> · PCR (OI): <strong style="color: #10b981;">1.18</strong></p>
+        </div>
+
+        <div class="fo-table-wrap">
+          <table class="fo-table">
+            <thead>
+              <tr>
+                <th style="color: #10b981;">CALL LTP (₹)</th>
+                <th>CALL OI</th>
+                <th>STRIKE</th>
+                <th>PUT OI</th>
+                <th style="color: #f43f5e;">PUT LTP (₹)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: #10b981;">₹235.60</td>
+                <td>58.4L</td>
+                <td><span class="strike-pill">24,700</span></td>
+                <td>28.9L</td>
+                <td style="color: #f43f5e;">₹34.10</td>
+              </tr>
+              <tr>
+                <td style="color: #10b981;">₹168.00</td>
+                <td>84.2L</td>
+                <td><span class="strike-pill">24,800</span></td>
+                <td>64.1L</td>
+                <td style="color: #f43f5e;">₹62.50</td>
+              </tr>
+              <tr class="atm">
+                <td style="color: #10b981;">₹108.40</td>
+                <td>96.5L</td>
+                <td><span class="strike-pill" style="border-color: #7c3aed; background: #7c3aed; color: #fff;">24,850 ATM</span></td>
+                <td>92.1L</td>
+                <td style="color: #f43f5e;">₹102.80</td>
+              </tr>
+              <tr>
+                <td style="color: #10b981;">₹62.10</td>
+                <td>72.1L</td>
+                <td><span class="strike-pill">24,900</span></td>
+                <td>48.7L</td>
+                <td style="color: #f43f5e;">₹154.30</td>
+              </tr>
+              <tr>
+                <td style="color: #10b981;">₹32.80</td>
+                <td>51.3L</td>
+                <td><span class="strike-pill">25,000</span></td>
+                <td>24.6L</td>
+                <td style="color: #f43f5e;">₹226.40</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Strategy Shortcuts -->
+        <div class="strategy-grid">
+          <div class="strategy-card">
+            <h4>Bull Call Spread</h4>
+            <p style="font-size: 13px; color: #8e9bb2; margin-bottom: 12px;">Moderately bullish stance with defined risk &amp; reward.</p>
+            <button class="btn btn-outline btn-sm" onclick="alert('Bull Call strategy selected.');">Select Strategy</button>
+          </div>
+          <div class="strategy-card">
+            <h4>Bear Put Spread</h4>
+            <p style="font-size: 13px; color: #8e9bb2; margin-bottom: 12px;">Moderately bearish stance with capped maximum loss.</p>
+            <button class="btn btn-outline btn-sm" onclick="alert('Bear Put strategy selected.');">Select Strategy</button>
+          </div>
+          <div class="strategy-card">
+            <h4>Long Straddle</h4>
+            <p style="font-size: 13px; color: #8e9bb2; margin-bottom: 12px;">Captures high volatility breakouts in either direction.</p>
+            <button class="btn btn-outline btn-sm" onclick="alert('Long Straddle strategy selected.');">Select Strategy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 QuickTrade · Simple &amp; Modern Investing</div>
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="stock.html">Stocks</a>
+          <a href="mutual-funds.html">Mutual Funds</a>
+          <a href="ipo.html">IPO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=3"></script>
+</body>
+</html>

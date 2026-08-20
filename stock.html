@@ -1,61 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Dashboard</title>
-    <link rel="stylesheet" href="stock.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Live Stocks | QuickTrade</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/stock.css?v=3">
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <img src="Stock logo.png" alt="Logo">
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="https://www.livemint.com/market/stock-market-news">News</a></li>
-            <li><a href="#about-us">About</a></li>
-        </ul>
-    </nav>
+
+  <!-- Minimal Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/Stock logo.png" alt="QuickTrade">
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="stock.html">Stocks</a>
+        <a class="nav-link" href="mutual-funds.html">Mutual Funds</a>
+        <a class="nav-link" href="futures-options.html">Futures &amp; Options</a>
+        <a class="nav-link" href="ipo.html">IPO</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="index.html#account">Open Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="stock-page-container">
     
-    <div class="container">
-        <aside>
-            <h2>Watchlist</h2>
-            <ul id="watchlist"></ul>
-        </aside>
-        
-        <main>
-            <header>
-                <h1>Stocks</h1>
-                <div class="search-box">
-                    <input type="text" id="stock-symbol" placeholder="Enter stock symbol (e.g., AAPL)">
-                    <button id="search-btn">Search</button>
-                    <button id="add-watchlist-btn">Add to Watchlist</button>
-                </div>
-            </header>
-            
-            <section id="stock-info">
-                <h2>Stock Information</h2>
-                <div id="stock-details">
-                    <p id="stock-name">Stock Name: <span></span></p>
-                    <p id="current-price">Current Price: <span></span></p>
-                    <p id="price-change">Price Change: <span></span></p>
-                </div>
-                <canvas id="stockChart" width="400" height="200"></canvas>
-            </section>
-            
-            <section id="comparison">
-                <h2>Stock Comparison</h2>
-                <div class="search-box">
-                    <input type="text" id="compare-symbol" placeholder="Enter stock symbol to compare">
-                    <button id="compare-btn">Compare</button>
-                </div>
-                <canvas id="comparisonChart" width="400" height="200"></canvas>
-            </section>
-        </main>
+    <!-- Minimal Search & Trending Pills -->
+    <div class="search-header">
+      <form class="search-form" id="stockSearchForm">
+        <input type="text" id="stockSearchInput" placeholder="Search AAPL, NVDA, RELIANCE..." autocomplete="off">
+        <button type="submit" class="btn btn-primary btn-sm">Search</button>
+      </form>
+
+      <div class="quick-pills">
+        <button class="pill-btn active" data-symbol="AAPL">AAPL</button>
+        <button class="pill-btn" data-symbol="NVDA">NVDA</button>
+        <button class="pill-btn" data-symbol="TSLA">TSLA</button>
+        <button class="pill-btn" data-symbol="MSFT">MSFT</button>
+        <button class="pill-btn" data-symbol="RELIANCE.NS">RELIANCE</button>
+        <button class="pill-btn" data-symbol="TCS.NS">TCS</button>
+      </div>
     </div>
 
-    <script src="stock.js"></script>
+    <!-- 2-Column Minimal Trading Workspace -->
+    <div class="stock-layout">
+      
+      <!-- Watchlist -->
+      <aside class="watchlist-card">
+        <div class="watchlist-header">
+          <span>Watchlist</span>
+          <span style="font-size: 11.5px; color: #8e9bb2;" id="marketStatusText"><span class="live-dot"></span> Live</span>
+        </div>
+        <ul class="watchlist-list" id="watchlistItems">
+          <!-- Rendered dynamically by stock.js -->
+        </ul>
+      </aside>
+
+      <!-- Active Stock Dashboard Card -->
+      <section class="stock-main-card">
+        
+        <!-- Quote Top Header -->
+        <div class="quote-top-row">
+          <div class="quote-titles">
+            <h2>
+              <span id="stockFullName">Apple Inc.</span>
+              <span class="symbol" id="stockSymbolBadge">AAPL</span>
+            </h2>
+            <p>Real-time market price · Updated live</p>
+          </div>
+          <div class="quote-price-col">
+            <div class="main-price" id="quoteMainPrice">$0.00</div>
+            <span class="price-change-badge pos" id="quoteChangeBadge">+0.00 (+0.00%)</span>
+          </div>
+        </div>
+
+        <!-- Minimal Chart Controls & Canvas -->
+        <div class="chart-bar">
+          <div class="timeframe-group">
+            <button class="tf-btn active" data-tf="1D">1D</button>
+            <button class="tf-btn" data-tf="5D">5D</button>
+            <button class="tf-btn" data-tf="1M">1M</button>
+            <button class="tf-btn" data-tf="1Y">1Y</button>
+          </div>
+          <div>
+            <button class="btn btn-outline btn-sm" onclick="selectStock(state.selectedSymbol);">↻ Refresh</button>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="stockCanvas"></canvas>
+        </div>
+
+        <!-- Key Stats Row -->
+        <div class="stats-row">
+          <div class="stat-item">
+            <span>Open</span>
+            <strong id="statOpen">—</strong>
+          </div>
+          <div class="stat-item">
+            <span>Day High</span>
+            <strong id="statHigh" style="color: var(--green);">—</strong>
+          </div>
+          <div class="stat-item">
+            <span>Day Low</span>
+            <strong id="statLow" style="color: var(--red);">—</strong>
+          </div>
+          <div class="stat-item">
+            <span>Volume</span>
+            <strong id="statVolume">—</strong>
+          </div>
+        </div>
+
+        <!-- Simple Clean Order / Action Box -->
+        <div class="simple-order-row">
+          <div>
+            <strong>Quick Paper Trade</strong>
+            <p style="font-size: 12px; color: #8e9bb2; margin: 2px 0 0;">Test trades risk-free with virtual balance.</p>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <button class="btn btn-primary btn-sm" onclick="alert('Demo Order Executed: Bought 10 shares of ' + state.selectedSymbol);">Buy Shares</button>
+            <button class="btn btn-outline btn-sm" onclick="alert('Demo Order Executed: Sold 10 shares of ' + state.selectedSymbol);">Sell Shares</button>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 QuickTrade · Simple &amp; Modern Investing</div>
+        <div class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="mutual-funds.html">Mutual Funds</a>
+          <a href="futures-options.html">Futures &amp; Options</a>
+          <a href="ipo.html">IPO</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js?v=3"></script>
+  <script src="js/stock.js?v=3"></script>
 </body>
 </html>

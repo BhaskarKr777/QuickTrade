@@ -1,153 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuickTrade</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuickTrade | Simple &amp; Modern Investing</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="Stock logo.png" alt="QuickTrade">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="stock.html">Stocks</a></li>
-                    <li><a href="https://www.livemint.com/market/stock-market-news">News</a></li>
-                    <li><a href="#">Invest</a></li>
-                    <li><a href="#steps">Free Demat Account</a></li>
-                    <li><a href="#about-us">About us</a></li>
-                    <!-- <li><a href="#">Pricing</a></li> -->
-                </ul>
-            </nav>
-            <div class="header-buttons">
-                <input type="text" placeholder="Search stocks" class="search-stocks-input">
-                <button class="sign-in-btn"><a href="login.html">Sign In</button></a>
-                <button class="open-account-btn"><a href="#steps">Open a Demat Account</button></a>
-            </div>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
+
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/images/Stock logo.png" alt="QuickTrade">
+      </a>
+      <nav class="main-nav">
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="stock.html">Stocks</a>
+        <a class="nav-link" href="mutual-funds.html">Mutual Funds</a>
+        <a class="nav-link" href="futures-options.html">Futures &amp; Options</a>
+        <a class="nav-link" href="ipo.html">IPO</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-ghost" href="login.html">Sign in</a>
+        <a class="btn btn-primary" href="#account">Open Account</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Minimal Hero -->
     <section class="hero">
-        <h1>One Demat Account. Multiple Investment Options</h1>
-        <div class="investment-options">
-            <div class="option">
-                <img src="Stock  Market.jpeg" alt="Mutual Funds">
-                <h3>Mutual Funds</h3>
-                <p>Enjoy top-rated mutual funds shortlisted based on in-depth risk and return analysis.</p>
-            </div>
-            <div class="option"><a href="stock.html">
-                <img  src="Stock.jpeg" alt="Stocks"></a>
-                <h3>Stocks</h3>
-                <p>View the most active and top trending stocks, today's gainers & losers in the market.</p>
-            </div>
-            <div class="option">
-                <img src="future.jpeg" alt="Futures and Options">
-                <h3>Futures and Options</h3>
-                <p>Analyze trends and get trading ideas from our option chain with Greeks, PCR, and more.</p>
-            </div>
-            <div class="option">
-                <img src="ipo.jpeg" alt="IPO">
-                <h3>IPO</h3>
-                <p>Enjoy pre-applying and applying for the latest IPOs at ₹0* commission.</p>
-            </div>
+      <div class="container">
+        <span class="hero-tag">✨ Simple, Transparent Investing</span>
+        <h1>One account. <span>Multiple ways to grow.</span></h1>
+        <p class="hero-copy">Explore live stock markets, zero-commission mutual funds, options, and upcoming IPOs with confidence.</p>
+        <div class="hero-actions">
+          <a href="stock.html" class="btn btn-primary">Explore Live Stocks →</a>
+          <a href="#calculator" class="btn btn-outline">SIP Calculator</a>
         </div>
+      </div>
     </section>
 
-    <!-- Steps Section -->
-    <section id="steps">
-        <h1>Open a Free Demat Account in 2 mins</h1>
-        <p>Quick & Secure Onboarding</p>
-        <div class="steps-container">
-            <div class="step">
-                <img  src="KYC.webp" alt="Verify KYC">
-                <h3>STEP 1</h3>
-                <p>Log in or sign up on "QuickTrade." Navigate to the KYC section in your account settings. Enter your personal details and upload your ID and proof of address. Review your information and submit the form. Your verification status will be updated once the process is complete.</p>
-            </div>
-            <div class="step">
-                <img src="esign.jpeg" alt="eSign">
-                <h3>STEP 2</h3>
-                <p>Once you’ve completed your KYC details, you'll need to eSign your form and documents to finalize the process. Navigate to the eSignature section within the KYC portal. Follow the prompts to digitally sign your form and any additional documents required. Ensure all signatures are completed correctly before submitting. </p>
-            </div>
-            <div class="step">
-                <img src="download.jpeg" alt="Download the App">
-                <h3>STEP 3</h3>
-                <p>Download the app & start trading</p>
-                    <p>
-                        <img src="google.png" alt="Google Play">
-                        <img src="apple.png" alt="App Store">
-                    </p>
-                </div>
-            </div>
+    <!-- Product Grid -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Explore Products</span>
+          <h2>Everything you need to invest</h2>
+          <p>Carefully designed investment tools built for clarity and speed.</p>
         </div>
+
+        <div class="product-grid">
+          <a class="product-card" href="stock.html">
+            <img src="assets/images/Stock.jpeg" alt="Stocks" class="product-img">
+            <h3>Stocks</h3>
+            <p>Live prices, real-time charts, and customizable watchlists for US and Indian equities.</p>
+            <span class="link">View Live Markets →</span>
+          </a>
+
+          <a class="product-card" href="mutual-funds.html">
+            <img src="assets/images/Stock  Market.jpeg" alt="Mutual Funds" class="product-img">
+            <h3>Mutual Funds</h3>
+            <p>Direct mutual funds shortlisted based on risk and long-term return potential.</p>
+            <span class="link">Explore Funds →</span>
+          </a>
+
+          <a class="product-card" href="futures-options.html">
+            <img src="assets/images/future.jpeg" alt="Futures and Options" class="product-img">
+            <h3>Futures &amp; Options</h3>
+            <p>Option chains, Greeks analysis, and simplified derivatives workspace.</p>
+            <span class="link">Explore F&amp;O →</span>
+          </a>
+
+          <a class="product-card" href="ipo.html">
+            <img src="assets/images/ipo.jpeg" alt="IPO" class="product-img">
+            <h3>IPO</h3>
+            <p>Discover upcoming public offerings and apply seamlessly with UPI.</p>
+            <span class="link">Explore IPOs →</span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Pro Section -->
-    <section class="pro-section">
-        <div class="pro-container">
-            <div class="pro-content">
-                <h2>QuickTrade For Traders</h2>
-                <p>Powerful trading in Equities, Futures, Options, Commodities, and Currencies made simple</p>
-                <div class="pro-features">
-                    <div class="feature">
-                        <h3>Powerful Charting</h3>
-                        <p>TradingView | 8 Charts at once | 100+ Indicators | 80+ Drawing tools</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Powerful Discovery</h3>
-                        <p>OI analysis | Option Chain with Greeks | FII & DII Data | F&O Smartlists</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Powerful Execution</h3>
-                        <p>GTT | Basket orders, with up to 10 orders | 2X Margin via Margin Pledge on 450+ Stocks</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pro-images">
-                <img src="powerful_charting_desktop.webp" alt="Pro Feature 1">
-                <img src="powerful_discovery_desktop.webp" alt="Pro Feature 2">
-                <img src="powerful_execution_desktop.webp" alt="Pro Feature 3">
-            </div>
+    <!-- Minimal SIP Calculator -->
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Plan Ahead</span>
+          <h2>SIP Wealth Calculator</h2>
+          <p>See how your regular monthly savings grow over time.</p>
         </div>
 
-        <section id="about-us">
-            <div class="container">
-                <h1>About Us</h1>
-                <p>Welcome to QuickTrade, your trusted partner in the world of investments. We offer a seamless and secure platform for trading stocks, mutual funds, futures, and IPOs. Our mission is to empower you with the tools and resources needed to make informed investment decisions. With a user-friendly interface and dedicated support, we strive to make trading accessible and efficient for everyone.</p>
-                <p>Founded with the goal of simplifying investment opportunities, QuickTrade combines cutting-edge technology with a commitment to customer satisfaction. Join us today and experience the future of trading.</p>
+        <div class="calc-box">
+          <div class="calc-sliders">
+            <div class="calc-group">
+              <label><span>Monthly Investment</span><strong id="sipAmountValue">₹10,000</strong></label>
+              <input type="range" id="sipAmount" min="500" max="100000" step="500" value="10000">
             </div>
-        </section>
+            <div class="calc-group">
+              <label><span>Expected Annual Return</span><strong id="sipReturnValue">14%</strong></label>
+              <input type="range" id="sipReturn" min="1" max="30" step="0.5" value="14">
+            </div>
+            <div class="calc-group">
+              <label><span>Time Period</span><strong id="sipPeriodValue">10 Yrs</strong></label>
+              <input type="range" id="sipPeriod" min="1" max="30" step="1" value="10">
+            </div>
+          </div>
 
+          <div class="calc-summary">
+            <span>Expected Total Wealth</span>
+            <h3 id="sipTotalWealth">₹26,24,911</h3>
+            <div class="calc-detail-row">
+              <span style="color: var(--muted);">Total Invested:</span>
+              <strong id="sipInvestedAmount">₹12,00,000</strong>
+            </div>
+            <div class="calc-detail-row">
+              <span style="color: var(--muted);">Est. Returns:</span>
+              <strong id="sipEstimatedReturns" style="color: var(--green);">₹14,24,911</strong>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">QuickTrade</div>
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Contact</a>
-            </div>
-            <p>&copy; 2024 QuickTrade. All rights reserved.</p>
-        </div>
-    </footer>
 
-    <script src="script.js"></script>
-    <!-- Chatbot Integration -->
-    <script>
-        window.embeddedChatbotConfig = {
-            chatbotId: "WFhJ82cjq2E0QIqgHPQC2",
-            domain: "www.chatbase.co"
-        }
-        </script>
-        <script
-        src="https://www.chatbase.co/embed.min.js"
-        chatbotId="WFhJ82cjq2E0QIqgHPQC2"
-        domain="www.chatbase.co"
-        defer>
-        </script>
-    
+    <!-- 3-Step Account Opening -->
+    <section class="section section-alt" id="account">
+      <div class="container">
+        <div class="section-header">
+          <span class="tag">Get Started</span>
+          <h2>Open a free Demat account in 3 minutes</h2>
+          <p>100% paperless onboarding with instant identity verification.</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card">
+            <img src="assets/images/KYC.webp" alt="KYC Verification">
+            <span class="step-num">Step 01</span>
+            <h3>Complete KYC</h3>
+            <p>Provide your basic details and complete digital identity verification.</p>
+          </div>
+
+          <div class="step-card">
+            <img src="assets/images/esign.jpeg" alt="Digital eSign">
+            <span class="step-num">Step 02</span>
+            <h3>eSign Document</h3>
+            <p>Digitally sign your account opening form with an instant Aadhaar OTP.</p>
+          </div>
+
+          <div class="step-card">
+            <img src="assets/images/stock1.webp" alt="Start Investing">
+            <span class="step-num">Step 03</span>
+            <h3>Start Investing</h3>
+            <p>Add funds securely and begin trading stocks, funds, and options.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Minimal Mobile App Download -->
+    <section class="section">
+      <div class="container">
+        <div class="app-banner">
+          <div>
+            <h2>Invest on the go with QuickTrade App</h2>
+            <p>Track live quotes, set price alerts, and execute orders anytime, anywhere.</p>
+            <div class="app-btn-row">
+              <a href="#" class="app-btn">
+                <img src="assets/images/apple.png" alt="Apple"> App Store
+              </a>
+              <a href="#" class="app-btn">
+                <img src="assets/images/google.png" alt="Google"> Google Play
+              </a>
+            </div>
+          </div>
+          <div class="app-qr">
+            <img src="assets/images/download.jpeg" alt="App QR Download">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© 2026 QuickTrade · Simple &amp; Modern Investing</div>
+        <div class="footer-nav">
+          <a href="stock.html">Stocks</a>
+          <a href="mutual-funds.html">Mutual Funds</a>
+          <a href="futures-options.html">Futures &amp; Options</a>
+          <a href="ipo.html">IPO</a>
+          <a href="login.html">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
